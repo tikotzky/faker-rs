@@ -1,0 +1,8 @@
+[package]
+
+name = "faker"
+version = "0.0.1"
+authors = ["Mordy Tikotzky <mordytk@gmail.com>"]
+
+[dependencies]
+time = "*"
