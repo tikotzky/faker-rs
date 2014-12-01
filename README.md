@@ -1,4 +1,6 @@
 #Faker
+[![faker travis](http://img.shields.io/travis/tikotzky/faker-rs.svg?branch=master&style=flat-square)](https://travis-ci.org/tikotzky/faker-rs)
+
 
 ## Authors
 * [Seth Pollack](https://github.com/sethpollack)
