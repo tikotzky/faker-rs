@@ -1,8 +1,14 @@
 use super::helpers;
+use super::random;
 
-pub fn words(num: uint) -> String {
-    helpers::shuffle(&LOREM).slice(0, num).connect(" ")
+pub fn words(num: uint) -> Vec<&'static str> {
+    helpers::shuffle(&LOREM).slice(0, num).to_vec()
 }
+
+pub fn sentence(word_count: uint, range: uint) -> String {
+    words(word_count + random::number_in_range(0, range)).connect(" ")
+}
+
 
 mod tests;
 
