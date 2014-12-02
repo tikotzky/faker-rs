@@ -3034,7 +3034,7 @@ static FIRST_NAMES: [&'static str, ..3007] = [
     "Zola",
     "Zora",
     "Zula"
-  ];
+];
 
 static LAST_NAMES: [&'static str, ..474] = [
     "Abbott",
@@ -3511,17 +3511,17 @@ static LAST_NAMES: [&'static str, ..474] = [
     "Ziemann",
     "Zieme",
     "Zulauf"
-  ];
+];
 
- static PREFIX: [&'static str, ..5] = [
+static PREFIX: [&'static str, ..5] = [
     "Mr.",
     "Mrs.",
     "Ms.",
     "Miss",
     "Dr."
-  ];
+];
 
-  static SUFFIX: [&'static str, ..11] = [
+static SUFFIX: [&'static str, ..11] = [
     "Jr.",
     "Sr.",
     "I",
@@ -3533,6 +3533,6 @@ static LAST_NAMES: [&'static str, ..474] = [
     "DDS",
     "PhD",
     "DVM"
-  ];
+];
 
-  mod tests;
+mod tests;
