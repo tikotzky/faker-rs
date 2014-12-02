@@ -13,3 +13,5 @@ pub fn array_element<T>(array: &[T]) -> &T {
     let index = number_in_range(0, array.len());
     &array[index]
 }
+
+mod tests;
