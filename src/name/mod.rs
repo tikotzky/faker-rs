@@ -3534,3 +3534,5 @@ static LAST_NAMES: [&'static str, ..474] = [
     "PhD",
     "DVM"
   ];
+
+  mod tests;
