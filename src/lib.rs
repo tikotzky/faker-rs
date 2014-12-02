@@ -4,5 +4,6 @@ extern crate regex;
 extern crate regex_macros;
 
 pub mod helpers;
+pub mod lorem;
 pub mod name;
 pub mod random;
