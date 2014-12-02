@@ -9,6 +9,26 @@ pub fn sentence(word_count: uint, range: uint) -> String {
     words(word_count + random::number_in_range(0, range)).connect(" ")
 }
 
+pub fn sentences(sentence_count: uint) -> String {
+    let mut sentences = Vec::new();
+    for _ in range(0, sentence_count) {
+        sentences.push(sentence(7, 3));
+    }
+    sentences.connect("\n")
+}
+
+pub fn paragraph(sentence_count: uint) -> String {
+    sentences(sentence_count + random::number_in_range(0, 3))
+}
+
+pub fn paragraphs(paragraph_count: uint) -> String {
+    let mut paragraphs = Vec::new();
+    for _ in range(0, paragraph_count) {
+        paragraphs.push(paragraph(3));
+    }
+    paragraphs.connect("\n \r\t")
+}
+
 
 mod tests;
 
