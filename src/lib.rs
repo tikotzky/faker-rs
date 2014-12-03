@@ -7,3 +7,5 @@ pub mod helpers;
 pub mod lorem;
 pub mod name;
 pub mod random;
+pub mod phone_numbers;
+pub mod images;
