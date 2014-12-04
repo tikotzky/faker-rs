@@ -27,3 +27,12 @@ fn test_number_in_range(){
 fn test_number_in_range_panic(){
     super::number_in_range(9i, 7);
 }
+
+#[test]
+fn test_array_element(){
+    let a : [int, ..1] = [1];
+    for _ in range(0u, 1000) {
+        // test that we dont try to access an index that is out of bounds
+        super::array_element(&a);
+    } 
+}
