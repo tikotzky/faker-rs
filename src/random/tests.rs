@@ -9,16 +9,16 @@ fn test_number(){
 fn test_number_in_range(){
     for _ in range(0u, 1000) {
         let a = super::number_in_range(-3i, 42);
-        assert!(a >= -3 && a < 42);
-        assert_eq!(super::number_in_range(0i, 1), 0);
-        assert_eq!(super::number_in_range(-12i, -11), -12);
+        assert!(a >= -3 && a <= 42);
+        assert_eq!(super::number_in_range(0i, 0), 0);
+        assert_eq!(super::number_in_range(-12i, -12), -12);
     }
 
     for _ in range(0u, 1000) {
         let a = super::number_in_range(10i, 42);
-        assert!(a >= 10 && a < 42);
-        assert_eq!(super::number_in_range(0i, 1), 0);
-        assert_eq!(super::number_in_range(3_000_000u, 3_000_001), 3_000_000);
+        assert!(a >= 10 && a <= 42);
+        assert_eq!(super::number_in_range(0i, 0), 0);
+        assert_eq!(super::number_in_range(3_000_000u, 3_000_000), 3_000_000);
     }
 }
 
