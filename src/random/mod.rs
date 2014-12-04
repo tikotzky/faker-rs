@@ -11,7 +11,7 @@ pub fn number_in_range<T: NumCast + Add<T,T> + SampleRange + PartialOrd>(min: T,
 }
 
 pub fn array_element<T>(array: &[T]) -> &T {
-    let index = number_in_range(0, array.len());
+    let index = number_in_range(0, array.len() - 1);
     &array[index]
 }
 
