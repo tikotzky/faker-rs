@@ -4,8 +4,7 @@ use super::random;
 // TODO add valid area codes.
 
 pub fn phone_number() -> String{
-    let format = phone_formats();
-	helpers::replace_sym_with_number(format)
+    phone_number_format(phone_formats().as_slice())
 }
 
 pub fn phone_number_format(format: &str) -> String{
