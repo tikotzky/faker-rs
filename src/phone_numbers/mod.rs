@@ -17,22 +17,22 @@ pub fn phone_formats() -> String {
 }
 
 static FORMATS: [&'static str, ..16] = [
-    "###-###-####",
-    "(###)###-####",
-    "###.###.####",
-    "1-###-###-####",
-    "###-###-#### x###",
-    "(###)###-#### x###",
-    "1-###-###-#### x###",
-    "###.###.#### x###",
-    "###-###-#### x####",
-    "(###)###-#### x####",
-    "1-###-###-#### x####",
-    "###.###.#### x####",
-    "###-###-#### x#####",
-    "(###)###-#### x#####",
-    "1-###-###-#### x#####",
-    "###.###.#### x#####"
+    "NXX-NXX-XXXX",
+    "(NXX)NXX-XXXX",
+    "NXX.NXX.XXXX",
+    "1-NXX-NXX-XXXX",
+    "NXX-NXX-XXXX xNXX",
+    "(NXX)NXX-XXXX xNXX",
+    "1-NXX-NXX-XXXX xNXX",
+    "NXX.NXX.XXXX xNXX",
+    "NXX-NXX-XXXX xNXXX",
+    "(NXX)NXX-XXXX xNXXX",
+    "1-NXX-NXX-XXXX xNXXX",
+    "NXX.NXX.XXXX xNXXX",
+    "NXX-NXX-XXXX xNXXXX",
+    "(NXX)NXX-NXX xNXXXX",
+    "1-NXX-NXX-XXXX xNXXXX",
+    "NXX.NXX.XXXX xNXXXX"
   ];
 
 mod tests;
