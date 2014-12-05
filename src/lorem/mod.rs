@@ -1,285 +1,41 @@
 use super::helpers;
 use super::random;
 
-pub fn words(num: uint) -> Vec<&'static str> {
-    helpers::shuffle(&LOREM).slice(0, num).to_vec()
-}
+struct Lorem {lorem: Vec<String>}
 
-pub fn sentence(word_count: uint, range: uint) -> String {
-    words(word_count + random::number_in_range(0, range)).connect(" ")
-}
-
-pub fn sentences(sentence_count: uint) -> String {
-    let mut sentences = Vec::new();
-    for _ in range(0, sentence_count) {
-        sentences.push(sentence(7, 3));
+impl Lorem {
+    fn new(lorem : Vec<String>) -> Lorem {
+        Lorem {lorem: lorem}
     }
-    sentences.connect("\n")
-}
 
-pub fn paragraph(sentence_count: uint) -> String {
-    sentences(sentence_count + random::number_in_range(0, 3))
-}
-
-pub fn paragraphs(paragraph_count: uint) -> String {
-    let mut paragraphs = Vec::new();
-    for _ in range(0, paragraph_count) {
-        paragraphs.push(paragraph(3));
+    fn words(&self, num: uint) -> Vec<String> {
+        helpers::shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
     }
-    paragraphs.connect("\n \r\t")
-}
 
+    fn sentence(&self, word_count: uint, range: uint) -> String {
+        self.words(word_count + random::number_in_range(0, range)).connect(" ")
+    }
+
+    fn sentences(&self, sentence_count: uint) -> String {
+        let mut sentences = Vec::new();
+        for _ in range(0, sentence_count) {
+            sentences.push(self.sentence(7, 3));
+        }
+        sentences.connect("\n")
+    }
+
+    fn paragraph(&self, sentence_count: uint) -> String {
+        self.sentences(sentence_count + random::number_in_range(0, 3))
+    }
+
+    fn paragraphs(&self, paragraph_count: uint) -> String {
+        let mut paragraphs = Vec::new();
+        for _ in range(0, paragraph_count) {
+            paragraphs.push(self.paragraph(3));
+        }
+        paragraphs.connect("\n \r\t")
+    }
+}
 
 mod tests;
 
-static LOREM: [&'static str, ..249] = [
-    "alias",
-    "consequatur",
-    "aut",
-    "perferendis",
-    "sit",
-    "voluptatem",
-    "accusantium",
-    "doloremque",
-    "aperiam",
-    "eaque",
-    "ipsa",
-    "quae",
-    "ab",
-    "illo",
-    "inventore",
-    "veritatis",
-    "et",
-    "quasi",
-    "architecto",
-    "beatae",
-    "vitae",
-    "dicta",
-    "sunt",
-    "explicabo",
-    "aspernatur",
-    "aut",
-    "odit",
-    "aut",
-    "fugit",
-    "sed",
-    "quia",
-    "consequuntur",
-    "magni",
-    "dolores",
-    "eos",
-    "qui",
-    "ratione",
-    "voluptatem",
-    "sequi",
-    "nesciunt",
-    "neque",
-    "dolorem",
-    "ipsum",
-    "quia",
-    "dolor",
-    "sit",
-    "amet",
-    "consectetur",
-    "adipisci",
-    "velit",
-    "sed",
-    "quia",
-    "non",
-    "numquam",
-    "eius",
-    "modi",
-    "tempora",
-    "incidunt",
-    "ut",
-    "labore",
-    "et",
-    "dolore",
-    "magnam",
-    "aliquam",
-    "quaerat",
-    "voluptatem",
-    "ut",
-    "enim",
-    "ad",
-    "minima",
-    "veniam",
-    "quis",
-    "nostrum",
-    "exercitationem",
-    "ullam",
-    "corporis",
-    "nemo",
-    "enim",
-    "ipsam",
-    "voluptatem",
-    "quia",
-    "voluptas",
-    "sit",
-    "suscipit",
-    "laboriosam",
-    "nisi",
-    "ut",
-    "aliquid",
-    "ex",
-    "ea",
-    "commodi",
-    "consequatur",
-    "quis",
-    "autem",
-    "vel",
-    "eum",
-    "iure",
-    "reprehenderit",
-    "qui",
-    "in",
-    "ea",
-    "voluptate",
-    "velit",
-    "esse",
-    "quam",
-    "nihil",
-    "molestiae",
-    "et",
-    "iusto",
-    "odio",
-    "dignissimos",
-    "ducimus",
-    "qui",
-    "blanditiis",
-    "praesentium",
-    "laudantium",
-    "totam",
-    "rem",
-    "voluptatum",
-    "deleniti",
-    "atque",
-    "corrupti",
-    "quos",
-    "dolores",
-    "et",
-    "quas",
-    "molestias",
-    "excepturi",
-    "sint",
-    "occaecati",
-    "cupiditate",
-    "non",
-    "provident",
-    "sed",
-    "ut",
-    "perspiciatis",
-    "unde",
-    "omnis",
-    "iste",
-    "natus",
-    "error",
-    "similique",
-    "sunt",
-    "in",
-    "culpa",
-    "qui",
-    "officia",
-    "deserunt",
-    "mollitia",
-    "animi",
-    "id",
-    "est",
-    "laborum",
-    "et",
-    "dolorum",
-    "fuga",
-    "et",
-    "harum",
-    "quidem",
-    "rerum",
-    "facilis",
-    "est",
-    "et",
-    "expedita",
-    "distinctio",
-    "nam",
-    "libero",
-    "tempore",
-    "cum",
-    "soluta",
-    "nobis",
-    "est",
-    "eligendi",
-    "optio",
-    "cumque",
-    "nihil",
-    "impedit",
-    "quo",
-    "porro",
-    "quisquam",
-    "est",
-    "qui",
-    "minus",
-    "id",
-    "quod",
-    "maxime",
-    "placeat",
-    "facere",
-    "possimus",
-    "omnis",
-    "voluptas",
-    "assumenda",
-    "est",
-    "omnis",
-    "dolor",
-    "repellendus",
-    "temporibus",
-    "autem",
-    "quibusdam",
-    "et",
-    "aut",
-    "consequatur",
-    "vel",
-    "illum",
-    "qui",
-    "dolorem",
-    "eum",
-    "fugiat",
-    "quo",
-    "voluptas",
-    "nulla",
-    "pariatur",
-    "at",
-    "vero",
-    "eos",
-    "et",
-    "accusamus",
-    "officiis",
-    "debitis",
-    "aut",
-    "rerum",
-    "necessitatibus",
-    "saepe",
-    "eveniet",
-    "ut",
-    "et",
-    "voluptates",
-    "repudiandae",
-    "sint",
-    "et",
-    "molestiae",
-    "non",
-    "recusandae",
-    "itaque",
-    "earum",
-    "rerum",
-    "hic",
-    "tenetur",
-    "a",
-    "sapiente",
-    "delectus",
-    "ut",
-    "aut",
-    "reiciendis",
-    "voluptatibus",
-    "maiores",
-    "doloribus",
-    "asperiores",
-    "repellat"
-];

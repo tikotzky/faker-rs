@@ -1,5 +1,3 @@
-extern crate toml;
-use std::io::File;
 use std::rand::{task_rng, Rng};
 use super::random;
 
