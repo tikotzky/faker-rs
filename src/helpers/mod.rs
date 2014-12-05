@@ -18,14 +18,4 @@ pub fn replace_sym_with_number(string: String) -> String {
     }).collect::<Vec<String>>().connect("")
 }
 
-pub fn get_value(file_path: &str, toml_path: &str) -> String{
-    let path = Path::new(file_path);
-    let mut file = File::open(&path).unwrap();
-    let toml = file.read_to_string().unwrap();
-    let value: toml::Value = from_str(toml.as_slice()).unwrap();
-    value.lookup(toml_path).unwrap().to_string()
-}
-
-
-
 mod tests;
