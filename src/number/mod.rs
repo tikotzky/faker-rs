@@ -8,14 +8,14 @@ impl Number {
 		Number
 	}
 
-	fn digit() -> String {
+	fn digit(&self) -> String {
 		helpers::number_in_range(0u, 9).to_string()
 	}
 
-	fn number(num: int) -> String {
+	fn number(&self, num: int) -> String {
 	 	range(0, num).map(|x| x.to_string()).collect::<Vec<String>>().connect("")
 	}
 
 }
 
-
+mod tests;
