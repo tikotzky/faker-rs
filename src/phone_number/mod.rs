@@ -1,5 +1,4 @@
 use super::helpers;
-use super::random;
 
 struct PhoneNumber {formats: Vec<String>}
 
@@ -17,7 +16,7 @@ impl PhoneNumber {
     }
 
     fn phone_formats(&self) -> String {
-        random::array_element(self.formats.as_slice()).to_string()
+        helpers::array_element(self.formats.as_slice()).to_string()
     }
 }
 

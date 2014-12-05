@@ -1,5 +1,4 @@
 use super::helpers;
-use super::random;
 
 struct Lorem {lorem: Vec<String>}
 
@@ -13,7 +12,7 @@ impl Lorem {
     }
 
     fn sentence(&self, word_count: uint, range: uint) -> String {
-        self.words(word_count + random::number_in_range(0, range)).connect(" ")
+        self.words(word_count + helpers::number_in_range(0, range)).connect(" ")
     }
 
     fn sentences(&self, sentence_count: uint) -> String {
@@ -25,7 +24,7 @@ impl Lorem {
     }
 
     fn paragraph(&self, sentence_count: uint) -> String {
-        self.sentences(sentence_count + random::number_in_range(0, 3))
+        self.sentences(sentence_count + helpers::number_in_range(0, 3))
     }
 
     fn paragraphs(&self, paragraph_count: uint) -> String {
