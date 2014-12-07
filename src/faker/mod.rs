@@ -1,12 +1,14 @@
 use super::image::Image;
 use super::lorem::Lorem;
 use super::name::Name;
+use super::number::Number;
 use super::locale::{Locale,en};
 
 pub struct Faker {
     pub image: Image,
     pub lorem: Lorem,
-    pub name: Name
+    pub name: Name,
+    pub number: Number
 }
 
 impl Faker {
@@ -18,9 +20,10 @@ impl Faker {
         };
 
         Faker{
-            image: Image::new(strings.clone()),
-            lorem: Lorem::new(strings.clone()),
-            name:  Name::new(strings.clone()) 
+            image:  Image::new  (strings.clone()),
+            lorem:  Lorem::new  (strings.clone()),
+            name:   Name::new   (strings.clone()) ,
+            number: Number::new (strings.clone())
         }
     }
 }
