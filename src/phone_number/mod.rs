@@ -18,7 +18,7 @@ impl PhoneNumber {
         helpers::replace_sym_with_number(format.to_string())
     }
 
-    pub fn phone_formats(&self) -> String {
+    fn phone_formats(&self) -> String {
         helpers::array_element(self.formats.as_slice()).to_string()
     }
 }
