@@ -20,7 +20,9 @@ static FORMATS: [&'static str, ..16] = [
 
 #[test]
 fn test_phone_number_format() {
-	let phone_number = super::PhoneNumber::new(FORMATS.to_vec().iter().map(|x| x.to_string()).collect());
+	let phone_number = super::PhoneNumber{
+        formats: FORMATS.to_vec()
+    };
 	for _ in range(0u, 1000) {
 		let num = phone_number.phone_number_format("N");
 		assert!(regex!(r"[2-9]").is_match(num.as_slice()));

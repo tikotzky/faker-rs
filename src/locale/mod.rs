@@ -2,13 +2,15 @@
 pub struct Locale<'a> {
     pub lorem:              Vec<&'static str>,
     
-    pub imageCategories:    Vec<&'static str>,
+    pub image_categories:    Vec<&'static str>,
 
-    pub nameFirst:          Vec<&'static str>,
-    pub nameLast:           Vec<&'static str>,
-    pub namePrefix:         Vec<&'static str>,
-    pub nameSuffix:         Vec<&'static str>,
-    pub nameTitle:          Vec<&'static str>
+    pub name_first:          Vec<&'static str>,
+    pub name_last:           Vec<&'static str>,
+    pub name_prefix:         Vec<&'static str>,
+    pub name_suffix:         Vec<&'static str>,
+    pub name_title:          Vec<&'static str>,
+
+    pub phone_formats:       Vec<&'static str>
 }
 
 pub mod en;

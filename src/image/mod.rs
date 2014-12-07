@@ -8,7 +8,7 @@ pub struct Image {
 
 impl Image {
 	pub fn new(locale: Locale) -> Image {
-		Image {categories: locale.imageCategories}
+		Image {categories: locale.image_categories}
 	}
 
 	pub fn image(&self, width: int, height: int) -> String {

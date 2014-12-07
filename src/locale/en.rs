@@ -256,7 +256,7 @@ pub fn load<'a>() -> Locale<'a> {
         ],
 
         //image
-        imageCategories: vec![
+        image_categories: vec![
             "abstract",
             "animals",
             "business",
@@ -273,7 +273,7 @@ pub fn load<'a>() -> Locale<'a> {
         ],
 
         //name
-        nameFirst: vec![
+        name_first: vec![
             "Aaliyah",
             "Aaron",
             "Abagail",
@@ -3282,7 +3282,7 @@ pub fn load<'a>() -> Locale<'a> {
             "Zora",
             "Zula"
         ],
-        nameLast: vec![
+        name_last: vec![
             "Abbott",
             "Abernathy",
             "Abshire",
@@ -3758,14 +3758,14 @@ pub fn load<'a>() -> Locale<'a> {
             "Zieme",
             "Zulauf"
         ],
-        namePrefix: vec![
+        name_prefix: vec![
             "Mr.",
             "Mrs.",
             "Ms.",
             "Miss",
             "Dr."
         ],
-        nameSuffix: vec![
+        name_suffix: vec![
             "Jr.",
             "Sr.",
             "I",
@@ -3778,7 +3778,7 @@ pub fn load<'a>() -> Locale<'a> {
             "PhD",
             "DVM"
         ],
-        nameTitle: vec![
+        name_title: vec![
               "Lead",
               "Senior",
               "Direct",
@@ -3801,6 +3801,26 @@ pub fn load<'a>() -> Locale<'a> {
               "Human",
               "Chief",
               "Principal"
-        ]
+        ],
+
+        //phone
+        phone_formats: vec![
+            "NXX-NXX-XXXX",
+            "(NXX)NXX-XXXX",
+            "NXX.NXX.XXXX",
+            "1-NXX-NXX-XXXX",
+            "NXX-NXX-XXXX xNXX",
+            "(NXX)NXX-XXXX xNXX",
+            "1-NXX-NXX-XXXX xNXX",
+            "NXX.NXX.XXXX xNXX",
+            "NXX-NXX-XXXX xNXXX",
+            "(NXX)NXX-XXXX xNXXX",
+            "1-NXX-NXX-XXXX xNXXX",
+            "NXX.NXX.XXXX xNXXX",
+            "NXX-NXX-XXXX xNXXXX",
+            "(NXX)NXX-NXX xNXXXX",
+            "1-NXX-NXX-XXXX xNXXXX",
+            "NXX.NXX.XXXX xNXXXX"
+          ]
     }
 }

@@ -12,11 +12,11 @@ pub struct Name {
 impl Name {
     pub fn new(locale: Locale) -> Name {
         Name {
-            first_names: locale.nameFirst, 
-            last_names: locale.nameLast, 
-            prefix: locale.namePrefix, 
-            suffix: locale.nameSuffix, 
-            title: locale.nameTitle
+            first_names: locale.name_first, 
+            last_names: locale.name_last, 
+            prefix: locale.name_prefix, 
+            suffix: locale.name_suffix, 
+            title: locale.name_title
         }
     }
 
