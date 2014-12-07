@@ -1,7 +1,7 @@
 use super::Locale;
 
-pub fn load<'a>() -> Locale<'a> {
-    Locale::<'a>{
+pub fn load() -> Locale {
+    Locale{
         //lorem
         lorem: vec![
             "alias",

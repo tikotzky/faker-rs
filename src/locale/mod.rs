@@ -1,5 +1,5 @@
 #[deriving(Clone)]
-pub struct Locale<'a> {
+pub struct Locale {
     pub lorem:              Vec<&'static str>,
     
     pub image_categories:    Vec<&'static str>,
