@@ -11,7 +11,7 @@ faker = "*"
 ## Usage
 ```rust
 let faker = Faker::new("us");
-faker.name.find_name(); // "Christophe Bartell"
+faker.name.name(); // "Christophe Bartell"
 ```
 ## Name
 ```rust
