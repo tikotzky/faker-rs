@@ -3,7 +3,7 @@
 
 Warning! This is still very much a work in progress and not production ready at the moment.
 ##Installation
-Add the faker to your Cargo.toml
+Add faker to your Cargo.toml
 ```toml
 [dependencies]
 faker = "*"
