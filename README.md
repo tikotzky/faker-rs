@@ -15,7 +15,7 @@ faker.name.find_name(); // "Christophe Bartell"
 ```
 ## Name
 ```rust
-faker.name.name(); // "Tyshawn Johns Sr."
+faker.name.find_name(); // "Tyshawn Johns Sr."
 faker.name.first_name(); // "Kaci"
 faker.name.last_name(); // "Ernser"
 faker.name.prefix(); // "Mr."
