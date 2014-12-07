@@ -34,12 +34,14 @@ fn test_suffix(){
 }
 
 fn new_name() -> super::Name {
-	let first_names = FIRST_NAMES.to_vec().iter().map(|x| x.to_string()).collect();
-	let last_names = LAST_NAMES.to_vec().iter().map(|x| x.to_string()).collect();
-	let prefix = PREFIX.to_vec().iter().map(|x| x.to_string()).collect();
-    let suffix = SUFFIX.to_vec().iter().map(|x| x.to_string()).collect();
-	let title = TITLE.to_vec().iter().map(|x| x.to_string()).collect();
-	super::Name::new(first_names, last_names, prefix, suffix, title)
+   super::Name {
+        first_names: FIRST_NAMES.to_vec(), 
+        last_names: LAST_NAMES.to_vec(), 
+        prefix: PREFIX.to_vec(), 
+        suffix: SUFFIX.to_vec(), 
+        title: TITLE.to_vec(),
+        helpers: super::super::helpers::Helpers
+    }
 }
 
 

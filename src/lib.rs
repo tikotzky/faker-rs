@@ -3,10 +3,14 @@ extern crate regex;
 #[phase(plugin)] 
 extern crate regex_macros;
 
-pub mod helpers;
+pub use faker::Faker;
+
+mod faker;
+mod locale;
+mod helpers;
+pub mod image;
 pub mod lorem;
 pub mod name;
-pub mod phone_number;
-pub mod image;
 pub mod number;
-pub mod faker;
+pub mod phone_number;
+

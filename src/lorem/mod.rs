@@ -1,42 +1,49 @@
-use super::helpers;
+use super::locale::Locale;
+use super::helpers::Helpers;
 
-pub struct Lorem {lorem: Vec<String>}
+pub struct Lorem {
+    lorem: Vec<&'static str>,
+    helpers: Helpers
+}
 
 impl Lorem {
-    fn new(lorem : Vec<String>) -> Lorem {
-        Lorem {lorem: lorem}
+    pub fn new(locale: Locale) -> Lorem {
+        Lorem {
+            lorem: locale.lorem,
+            helpers: Helpers
+        }
     }
 
-    fn word(&self) -> String {
+    pub fn word(&self) -> String {
         self.words(1).connect("")
     }
 
-    fn words(&self, num: uint) -> Vec<String> {
-        helpers::shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
+    pub fn words(&self, num: uint) -> Vec<&str> {
+        self.helpers.shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
     }
 
-    fn sentence(&self, word_count: uint, range: uint) -> String {
-        self.words(word_count + helpers::number_in_range(0, range)).connect(" ")
+    pub fn sentence(&self, word_count: uint, range: uint) -> String {
+        self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")
     }
 
-    fn sentences(&self, sentence_count: uint) -> String {
+    pub fn sentences(&self, sentence_count: uint) -> Vec<String> {
         let mut sentences = Vec::new();
         for _ in range(0, sentence_count) {
             sentences.push(self.sentence(7, 3));
         }
-        sentences.connect("\n")
+        sentences
     }
 
-    fn paragraph(&self, sentence_count: uint) -> String {
-        self.sentences(sentence_count + helpers::number_in_range(0, 3))
+    pub fn paragraph(&self, sentence_count: uint) -> String {
+        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).connect("\n")
     }
 
-    fn paragraphs(&self, paragraph_count: uint) -> String {
+    pub fn paragraphs(&self, paragraph_count: uint) -> Vec<String> {
         let mut paragraphs = Vec::new();
         for _ in range(0, paragraph_count) {
             paragraphs.push(self.paragraph(3));
         }
-        paragraphs.connect("\n \r\t")
+        paragraphs
     }
 }
 

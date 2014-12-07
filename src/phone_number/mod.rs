@@ -1,22 +1,29 @@
-use super::helpers;
+use super::locale::Locale;
+use super::helpers::Helpers;
 
-pub struct PhoneNumber {formats: Vec<String>}
+pub struct PhoneNumber {
+    formats: Vec<&'static str>,
+    helpers: Helpers
+}
 
 impl PhoneNumber {
-    fn new(formats: Vec<String>) -> PhoneNumber {
-        PhoneNumber {formats: formats}
+    pub fn new(locale: Locale) -> PhoneNumber {
+        PhoneNumber {
+            formats: locale.phone_formats,
+            helpers: Helpers
+        }
     }
 
-    fn phone_number(&self) -> String {
+    pub fn phone_number(&self) -> String {
         self.phone_number_format(self.phone_formats().as_slice())
     }
 
-    fn phone_number_format(&self, format: &str) -> String {
-        helpers::replace_sym_with_number(format.to_string())
+    pub fn phone_number_format(&self, format: &str) -> String {
+        self.helpers.replace_sym_with_number(format.to_string())
     }
 
     fn phone_formats(&self) -> String {
-        helpers::array_element(self.formats.as_slice()).to_string()
+        self.helpers.array_element(self.formats.as_slice()).to_string()
     }
 }
 
