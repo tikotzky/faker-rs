@@ -30,5 +30,9 @@ fn main() {
     println!("faker.number.digit() = {}",       faker.number.digit());
     println!("faker.number.number() = {}",      faker.number.number(5));
 
+    println!("\n\n#### BEGIN PHONE NUMBER ####")
+    println!("faker.phone_number.phone_number() = {}",  faker.phone_number.phone_number());
+    println!("faker.number.phone_number_format() = {}", faker.phone_number.phone_number_format("A###-B###-C###"));
+
     return;
 }
