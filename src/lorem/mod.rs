@@ -26,24 +26,24 @@ impl Lorem {
         self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")
     }
 
-    pub fn sentences(&self, sentence_count: uint) -> String {
+    pub fn sentences(&self, sentence_count: uint) -> Vec<String> {
         let mut sentences = Vec::new();
         for _ in range(0, sentence_count) {
             sentences.push(self.sentence(7, 3));
         }
-        sentences.connect("\n")
+        sentences
     }
 
     pub fn paragraph(&self, sentence_count: uint) -> String {
-        self.sentences(sentence_count + self.helpers.number_in_range(0, 3))
+        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).connect("\n")
     }
 
-    pub fn paragraphs(&self, paragraph_count: uint) -> String {
+    pub fn paragraphs(&self, paragraph_count: uint) -> Vec<String> {
         let mut paragraphs = Vec::new();
         for _ in range(0, paragraph_count) {
             paragraphs.push(self.paragraph(3));
         }
-        paragraphs.connect("\n \r\t")
+        paragraphs
     }
 }
 
