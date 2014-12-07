@@ -39,7 +39,8 @@ fn new_name() -> super::Name {
         last_names: LAST_NAMES.to_vec(), 
         prefix: PREFIX.to_vec(), 
         suffix: SUFFIX.to_vec(), 
-        title: TITLE.to_vec()
+        title: TITLE.to_vec(),
+        helpers: super::super::helpers::Helpers
     }
 }
 

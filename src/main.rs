@@ -1,6 +1,9 @@
+#[cfg(not(test))]
 extern crate faker;
+#[cfg(not(test))]
 use faker::Faker;
 
+#[cfg(not(test))]
 fn main() {
 
     let faker = Faker::new("en");
@@ -33,6 +36,10 @@ fn main() {
     println!("\n\n#### BEGIN PHONE NUMBER ####")
     println!("faker.phone_number.phone_number() = {}",  faker.phone_number.phone_number());
     println!("faker.number.phone_number_format() = {}", faker.phone_number.phone_number_format("A###-B###-C###"));
+
+    println!("\n\n#### BEGIN HELPERS ####")
+    println!("faker.helpers.number() = {}",             faker.helpers.number::<int>());
+    println!("faker.helpers.number_in_range() = {}",    faker.helpers.number_in_range(0i, 10));
 
     return;
 }

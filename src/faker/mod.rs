@@ -1,11 +1,13 @@
+use super::helpers::Helpers;
 use super::image::Image;
 use super::lorem::Lorem;
 use super::name::Name;
 use super::number::Number;
 use super::phone_number::PhoneNumber;
-use super::locale::{Locale,en};
+use super::locale::en;
 
 pub struct Faker {
+    pub helpers: Helpers,
     pub image: Image,
     pub lorem: Lorem,
     pub name: Name,
@@ -22,10 +24,11 @@ impl Faker {
         };
 
         Faker{
+            helpers     :   Helpers::new     (),
             image       :   Image::new       (strings.clone()),
             lorem       :   Lorem::new       (strings.clone()),
             name        :   Name::new        (strings.clone()),
-            number      :   Number::new      (strings.clone()),
+            number      :   Number::new      (),
             phone_number:   PhoneNumber::new (strings.clone())
         }
     }

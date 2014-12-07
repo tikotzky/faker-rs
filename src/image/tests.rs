@@ -9,17 +9,19 @@ fn test_image() {
 fn test_category() {
 	let image = new_image();
 	let matched = regex!(r"http://lorempixel.com/100/100/cats").is_match(image.category(100i,100i,"cats").as_slice());
+    assert!(matched);
 }
 
 #[test]
 fn test_avatar() {
 	let image = new_image();
-	let matched = regex!(r"http://robohash.org/my-own-slug.bmp\?size=50x50").is_match(image.avatar(50, 50, "my-own-slug", "bmp").as_slice());
+    assert_eq!(image.avatar(50, 50, "tikotzky", "bmp"), "http://robohash.org/#tikotzky.#bmp?size=#50x50");
 }
 
 fn new_image() -> super::Image{
 	super::Image{
-        categories: CATEGORIES.to_vec()
+        categories: CATEGORIES.to_vec(),
+        helpers: super::super::helpers::Helpers
     }
 }
 

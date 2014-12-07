@@ -1,18 +1,21 @@
 use super::locale::Locale;
-use super::helpers;
-use std::fmt;
+use super::helpers::Helpers;
 
 pub struct Image {
-	categories: Vec<&'static str>
+	categories: Vec<&'static str>,
+    helpers: Helpers
 }
 
 impl Image {
 	pub fn new(locale: Locale) -> Image {
-		Image {categories: locale.image_categories}
+		Image {
+            categories: locale.image_categories,
+            helpers: Helpers
+        }
 	}
 
 	pub fn image(&self, width: int, height: int) -> String {
-		self.category(width, height, helpers::array_element(self.categories.as_slice()).as_slice())
+		self.category(width, height, self.helpers.array_element(self.categories.as_slice()).as_slice())
 	}
 
 	pub fn category(&self, width: int, height: int, category: &str) -> String {

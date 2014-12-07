@@ -25,7 +25,8 @@ fn test_paragraphs(){
 
 fn new_lorem() -> super::Lorem {
 	super::Lorem{
-        lorem: LOREM.to_vec()
+        lorem: LOREM.to_vec(),
+        helpers: super::super::helpers::Helpers
     }
 }
 

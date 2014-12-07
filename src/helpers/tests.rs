@@ -1,5 +1,8 @@
+use super::Helpers;
+
 #[test]
 fn test_shuffle(){
+    let helpers = Helpers;
     static TEST_ARRAY: [&'static str, ..5] = [
         "One",
         "Two",
@@ -8,7 +11,7 @@ fn test_shuffle(){
         "Five"
     ];
 
-    let a = super::shuffle(&TEST_ARRAY);
+    let a = helpers.shuffle(&TEST_ARRAY);
     // Test that we got back an array of the same length
     assert_eq!(a.len(), 5);
     // Test thhat at least one of the array elements are not in the original position
@@ -18,39 +21,43 @@ fn test_shuffle(){
 
 #[test]
 fn test_number(){
-    let a = super::number::<int>();
+    let helpers = Helpers;
+    let a: int = helpers.number();
     let b = 1i;
     assert_eq!(a/b, a);
 }
 
 #[test]
 fn test_number_in_range(){
+    let helpers = Helpers;
     for _ in range(0u, 1000) {
-        let a = super::number_in_range(-3i, 42);
+        let a = helpers.number_in_range(-3i, 42);
         assert!(a >= -3 && a <= 42);
-        assert_eq!(super::number_in_range(0i, 0), 0);
-        assert_eq!(super::number_in_range(-12i, -12), -12);
+        assert_eq!(helpers.number_in_range(0i, 0), 0);
+        assert_eq!(helpers.number_in_range(-12i, -12), -12);
     }
 
     for _ in range(0u, 1000) {
-        let a = super::number_in_range(10i, 42);
+        let a = helpers.number_in_range(10i, 42);
         assert!(a >= 10 && a <= 42);
-        assert_eq!(super::number_in_range(0i, 0), 0);
-        assert_eq!(super::number_in_range(3_000_000u, 3_000_000), 3_000_000);
+        assert_eq!(helpers.number_in_range(0i, 0), 0);
+        assert_eq!(helpers.number_in_range(3_000_000u, 3_000_000), 3_000_000);
     }
 }
 
 #[test]
 #[should_fail]
 fn test_number_in_range_panic(){
-    super::number_in_range(9i, 7);
+    let helpers = Helpers;
+    helpers.number_in_range(9i, 7);
 }
 
 #[test]
 fn test_array_element(){
+    let helpers = Helpers;
     let a : [int, ..1] = [1];
     for _ in range(0u, 1000) {
         // test that we dont try to access an index that is out of bounds
-        super::array_element(&a);
+        helpers.array_element(&a);
     } 
 }

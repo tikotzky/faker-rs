@@ -21,7 +21,8 @@ static FORMATS: [&'static str, ..16] = [
 #[test]
 fn test_phone_number_format() {
 	let phone_number = super::PhoneNumber{
-        formats: FORMATS.to_vec()
+        formats: FORMATS.to_vec(),
+        helpers: super::super::helpers::Helpers
     };
 	for _ in range(0u, 1000) {
 		let num = phone_number.phone_number_format("N");

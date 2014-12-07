@@ -1,13 +1,17 @@
 use super::locale::Locale;
-use super::helpers;
+use super::helpers::Helpers;
 
 pub struct Lorem {
-    lorem: Vec<&'static str>
+    lorem: Vec<&'static str>,
+    helpers: Helpers
 }
 
 impl Lorem {
     pub fn new(locale: Locale) -> Lorem {
-        Lorem {lorem: locale.lorem}
+        Lorem {
+            lorem: locale.lorem,
+            helpers: Helpers
+        }
     }
 
     pub fn word(&self) -> String {
@@ -15,11 +19,11 @@ impl Lorem {
     }
 
     pub fn words(&self, num: uint) -> Vec<&str> {
-        helpers::shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
+        self.helpers.shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
     }
 
     pub fn sentence(&self, word_count: uint, range: uint) -> String {
-        self.words(word_count + helpers::number_in_range(0, range)).connect(" ")
+        self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")
     }
 
     pub fn sentences(&self, sentence_count: uint) -> String {
@@ -31,7 +35,7 @@ impl Lorem {
     }
 
     pub fn paragraph(&self, sentence_count: uint) -> String {
-        self.sentences(sentence_count + helpers::number_in_range(0, 3))
+        self.sentences(sentence_count + self.helpers.number_in_range(0, 3))
     }
 
     pub fn paragraphs(&self, paragraph_count: uint) -> String {
