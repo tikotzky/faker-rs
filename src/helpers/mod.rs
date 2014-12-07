@@ -13,6 +13,7 @@ pub fn replace_sym_with_number(string: String) -> String {
         'X' => number_in_range(0i, 9i).to_string(),
         'Z' => number_in_range(1i, 9i).to_string(),
         'N' => number_in_range(2i, 9i).to_string(),
+        '#' => number_in_range(0i, 9i).to_string(),
         other => other.to_string() 
     }).collect::<Vec<String>>().connect("")
 }

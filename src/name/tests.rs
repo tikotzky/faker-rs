@@ -13,8 +13,8 @@ fn test_last_name(){
 }
 
 #[test]
-fn test_find_name(){
-	let name = new_name().find_name();
+fn test_name(){
+	let name = new_name().name();
 	let matched = regex!(r"^(\w+\.? ?){2,3}$").is_match(name.as_slice());
 	assert!(matched);
 }
@@ -33,13 +33,13 @@ fn test_suffix(){
 	assert!(matched);
 }
 
-
 fn new_name() -> super::Name {
 	let first_names = FIRST_NAMES.to_vec().iter().map(|x| x.to_string()).collect();
 	let last_names = LAST_NAMES.to_vec().iter().map(|x| x.to_string()).collect();
 	let prefix = PREFIX.to_vec().iter().map(|x| x.to_string()).collect();
-	let suffix = SUFFIX.to_vec().iter().map(|x| x.to_string()).collect();
-	super::Name::new(first_names, last_names, prefix, suffix)
+    let suffix = SUFFIX.to_vec().iter().map(|x| x.to_string()).collect();
+	let title = TITLE.to_vec().iter().map(|x| x.to_string()).collect();
+	super::Name::new(first_names, last_names, prefix, suffix, title)
 }
 
 
@@ -3550,4 +3550,29 @@ static SUFFIX: [&'static str, ..11] = [
     "DDS",
     "PhD",
     "DVM"
+];
+
+static TITLE: [&'static str, ..22] = [
+      "Lead",
+      "Senior",
+      "Direct",
+      "Corporate",
+      "Dynamic",
+      "Future",
+      "Product",
+      "National",
+      "Regional",
+      "District",
+      "Central",
+      "Global",
+      "Customer",
+      "Investor",
+      "Dynamic",
+      "International",
+      "Legacy",
+      "Forward",
+      "Internal",
+      "Human",
+      "Chief",
+      "Principal"
 ];

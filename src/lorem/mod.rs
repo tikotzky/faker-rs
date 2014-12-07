@@ -7,6 +7,10 @@ impl Lorem {
         Lorem {lorem: lorem}
     }
 
+    fn word(&self) -> String {
+        self.words(1).connect("")
+    }
+
     fn words(&self, num: uint) -> Vec<String> {
         helpers::shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
     }
