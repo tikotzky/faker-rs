@@ -10,7 +10,7 @@ faker = "*"
 ```
 ## Usage
 ```rust
-let faker = Faker::new('us');
+let faker = Faker::new("us");
 faker.name.find_name(); // "Christophe Bartell"
 ```
 ## Name
