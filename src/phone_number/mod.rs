@@ -20,4 +20,5 @@ impl PhoneNumber {
     }
 }
 
+#[cfg(test)]
 mod tests;
