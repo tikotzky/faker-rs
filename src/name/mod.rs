@@ -1,39 +1,46 @@
+use super::locale::Locale;
 use super::helpers;
 
 pub struct Name {
-    first_names: Vec<String>, 
-    last_names: Vec<String>, 
-    prefix: Vec<String>, 
-    suffix: Vec<String>,
-    title: Vec<String>
+    first_names: Vec<&'static str>, 
+    last_names: Vec<&'static str>, 
+    prefix: Vec<&'static str>, 
+    suffix: Vec<&'static str>,
+    title: Vec<&'static str>
 }
 
 impl Name {
-    fn new(first_names: Vec<String>, last_names: Vec<String>, prefix: Vec<String>, suffix: Vec<String>, title: Vec<String>) -> Name {
-        Name {first_names: first_names, last_names: last_names, prefix: prefix, suffix: suffix, title: title}
+    pub fn new(locale: Locale) -> Name {
+        Name {
+            first_names: locale.nameFirst, 
+            last_names: locale.nameLast, 
+            prefix: locale.namePrefix, 
+            suffix: locale.nameSuffix, 
+            title: locale.nameTitle
+        }
     }
 
-    fn first_name(&self) -> String {
-        helpers::array_element(self.first_names.as_slice()).to_string()
-    }
-
-    fn title(&self) -> String {
+    pub fn title(&self) -> String {
         helpers::array_element(self.title.as_slice()).to_string()
     }
 
-    fn last_name(&self)  -> String {
+    pub fn first_name(&self) -> String {
+        helpers::array_element(self.first_names.as_slice()).to_string()
+    }
+
+    pub fn last_name(&self)  -> String {
         helpers::array_element(self.last_names.as_slice()).to_string()
     }
 
-    fn prefix(&self)     -> String {
+    pub fn prefix(&self)     -> String {
         helpers::array_element(self.prefix.as_slice()).to_string()
     }
 
-    fn suffix(&self)     -> String {
+    pub fn suffix(&self)     -> String {
         helpers::array_element(self.suffix.as_slice()).to_string()
     }
 
-    fn name(&self)  -> String {
+    pub fn name(&self)  -> String {
         let name = self.first_name() + " " + self.last_name();
         match helpers::number_in_range::<int>(0, 8) {
             0 => self.prefix() + " " + name,

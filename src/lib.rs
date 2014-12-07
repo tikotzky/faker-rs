@@ -8,11 +8,10 @@ pub use faker::Faker;
 mod faker;
 mod locale;
 mod helpers;
-pub mod lorem;
 pub mod image;
+pub mod lorem;
+pub mod name;
 
-
-// pub mod name;
 // pub mod phone_number;
 
 // pub mod number;
