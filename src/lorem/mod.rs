@@ -1,17 +1,20 @@
 use super::helpers;
+use super::locale::Locale;
 
-pub struct Lorem {lorem: Vec<String>}
+pub struct Lorem {
+    lorem: Vec<&'static str>
+}
 
 impl Lorem {
-    fn new(lorem : Vec<String>) -> Lorem {
-        Lorem {lorem: lorem}
+    pub fn new(locale: Locale) -> Lorem {
+        Lorem {lorem: locale.lorem}
     }
 
     fn word(&self) -> String {
         self.words(1).connect("")
     }
 
-    fn words(&self, num: uint) -> Vec<String> {
+    fn words(&self, num: uint) -> Vec<&str> {
         helpers::shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
     }
 
