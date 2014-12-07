@@ -26,26 +26,12 @@ faker.name.suffix(); // "IV"
 faker.lorem.word();  // "eligendi"
 faker.lorem.words(5) // ["molestiae", "et", "non", "qui", "nisi"]
 faker.lorem.sentence(4, 6); // "quia itaque veritatis ea voluptatibus"
-
 faker.lorem.sentences(3); 
-// ["vero labore nemo soluta commodi sequi consequatur sed",    
-// "cupiditate quo officiis perspiciatis vel reiciendis atque veniam",     
-// "facere consequuntur ut voluptas quos veniam aut id dolores"]   
-
+//["vero labore nemo soluta commodi sequi consequatur sed", "cupiditate quo officiis perspiciatis vel reiciendis atque veniam", "facere consequuntur ut voluptas quos veniam aut id dolores"]
 faker.lorem.paragraph(3);   
-// "optio praesentium aut qui et soluta cupiditate aut pariatur
-// consequatur accusantium porro amet expedita fugiat ipsa quidem quia at
-// rerum id non voluptatem cupiditate velit consequatur laudantium"
-
+//"et et velit neque et nostrum vel dolorem blanditiis ut occaecati officia odit ratione totam voluptatem et quam quo amet laudantium aut porro aut esse pariatur suscipit et doloremque ipsam rerum qui cupiditate tempore maiores voluptas"
 faker.lorem.paragraphs(2); 
-// ["dolorem iste vitae doloribus ea vel nulla qui
-// aliquam et dolorem eius rem voluptas deleniti voluptatem occaecati
-// sint voluptatem fuga non ducimus voluptas eaque quia
-// dicta nobis vel voluptatem id suscipit inventore
-// et excepturi earum mollitia rem tempora deserunt laborum nobis, eum qui accusantium et incidunt ad provident     // laboriosam similique",
-// "ut nulla qui qui atque et iste rerum incidunt quia
-// voluptas nobis nemo rerum assumenda voluptate non qui
-// mollitia molestiae nesciunt tempore repellat ipsam natus cupiditate"]
+//[dolorem iste vitae doloribus ea vel nulla qui aliquam et dolorem eius rem voluptas deleniti voluptatem occaecati sint voluptatem fuga non ducimus voluptas eaque quia dicta nobis vel voluptatem id suscipit inventore et excepturi earum mollitia rem tempora deserunt laborum nobis, eum qui accusantium et incidunt ad provident laboriosam similique ut nulla qui qui atque et iste rerum incidunt quia voluptas nobis nemo rerum assumenda voluptate non qui mollitia molestiae nesciunt tempore repellat ipsam natus cupiditate]
 ```
 ## Number
 ```rust
