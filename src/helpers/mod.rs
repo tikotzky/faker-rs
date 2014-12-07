@@ -30,4 +30,6 @@ pub fn array_element<T>(array: &[T]) -> &T {
     let index = number_in_range(0, array.len() - 1);
     &array[index]
 }
+
+#[cfg(test)]
 mod tests;
