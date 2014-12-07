@@ -23,9 +23,29 @@ faker.name.suffix(); // "IV"
 ```
 ## Lorem
 ```rust
-faker.lorem.word(); // "repellendus"
-// returns a Vec<String>
-faker.lorem.words(4); // ["culpa", "recusandae", "aut", "omnis"]
+faker.lorem.word();  // "eligendi"
+faker.lorem.words(5) // ["molestiae", "et", "non", "qui", "nisi"]
+faker.lorem.sentence(4, 6); // "quia itaque veritatis ea voluptatibus"
+
+faker.lorem.sentences(3); 
+// ["vero labore nemo soluta commodi sequi consequatur sed",    
+// "cupiditate quo officiis perspiciatis vel reiciendis atque veniam",     
+// "facere consequuntur ut voluptas quos veniam aut id dolores"]   
+
+faker.lorem.paragraph(3);   
+// "optio praesentium aut qui et soluta cupiditate aut pariatur
+// consequatur accusantium porro amet expedita fugiat ipsa quidem quia at
+// rerum id non voluptatem cupiditate velit consequatur laudantium"
+
+faker.lorem.paragraphs(2); 
+// ["dolorem iste vitae doloribus ea vel nulla qui
+// aliquam et dolorem eius rem voluptas deleniti voluptatem occaecati
+// sint voluptatem fuga non ducimus voluptas eaque quia
+// dicta nobis vel voluptatem id suscipit inventore
+// et excepturi earum mollitia rem tempora deserunt laborum nobis, eum qui accusantium et incidunt ad provident     // laboriosam similique",
+// "ut nulla qui qui atque et iste rerum incidunt quia
+// voluptas nobis nemo rerum assumenda voluptate non qui
+// mollitia molestiae nesciunt tempore repellat ipsam natus cupiditate"]
 ```
 ## Number
 ```rust
@@ -61,9 +81,9 @@ Phone numbers may be in any of the following formats:
 * "NXX.NXX.XXXX xNXXXX"
 
 #####This format gets replaced with the following:
-- `X` or `#` => random int between `0-9`
-- `Z` => random int between `1-9`
-- `N` => random int between `2-9`
+- 'X' or '#' => a number 0-9
+- 'Z' => a number 1-9
+- 'N' => a number 2-9
 
 ## Image
 ```rust
