@@ -6,8 +6,5 @@ authors = ["Mordy Tikotzky <mordytk@gmail.com>", "Seth Pollack <teampollack@gmai
 homepage = "https://github.com/tikotzky/faker-rs"
 repository = "https://github.com/tikotzky/faker-rs"
 license = "MIT/Apache-2.0"
-<<<<<<< HEAD
 description = "A library for generating fake data such as names, addresses, and phone numbers."
-=======
-description = "A library for generating fake data such as names, addresses, and phone numbers."
->>>>>>> 676fd2b5325b105c2f77a8ea9a833732905eb1a1
+
