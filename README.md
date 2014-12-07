@@ -65,6 +65,27 @@ Phone numbers may be in any of the following formats:
 - 'Z' => a number 1-9
 - 'N' => a number 2-9
 
+## Image
+```rust
+faker.image.avatar("my-own-slug", "50x50", "bmp") // "http://robohash.org/my-own-slug.bmp?size=50x50"
+faker.image.category(100, 100, "cats") // "http://lorempixel.com/100/100/cats"
+// returns an image with a random category
+faker.image.image(100, 100) // "http://lorempixel.com/100/100/business"
+```
+#####Avaiable categories are:
+* abstract
+* animals
+* business
+* cats
+* city
+* food
+* nightlife
+* fashion
+* people
+* nature
+* sports
+* technics
+* transport
 
 ## Authors
 * [Seth Pollack](https://github.com/sethpollack)
