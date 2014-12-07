@@ -38,4 +38,5 @@ impl Name {
     }
 }
 
+#[cfg(test)]
 mod tests;
