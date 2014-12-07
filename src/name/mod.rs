@@ -1,6 +1,6 @@
 use super::helpers;
 
-struct Name {
+pub struct Name {
     first_names: Vec<String>, 
     last_names: Vec<String>, 
     prefix: Vec<String>, 

@@ -1,6 +1,6 @@
 use super::helpers;
 
-struct Number;
+pub struct Number;
 
 impl Number {
 

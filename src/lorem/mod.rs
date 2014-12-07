@@ -1,6 +1,6 @@
 use super::helpers;
 
-struct Lorem {lorem: Vec<String>}
+pub struct Lorem {lorem: Vec<String>}
 
 impl Lorem {
     fn new(lorem : Vec<String>) -> Lorem {

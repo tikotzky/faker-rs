@@ -9,3 +9,4 @@ pub mod name;
 pub mod phone_number;
 pub mod image;
 pub mod number;
+pub mod faker;

@@ -1,6 +1,6 @@
 use super::helpers;
 
-struct PhoneNumber {formats: Vec<String>}
+pub struct PhoneNumber {formats: Vec<String>}
 
 impl PhoneNumber {
     fn new(formats: Vec<String>) -> PhoneNumber {

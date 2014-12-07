@@ -1,5 +1,3 @@
 
 
-pub fn avatar(){
-	
-}
+pub struct Image;
