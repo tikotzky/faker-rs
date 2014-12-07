@@ -61,9 +61,9 @@ Phone numbers may be in any of the following formats:
 * "NXX.NXX.XXXX xNXXXX"
 
 #####This format gets replaced with the following:
-- 'X' or '#' => a number 0-9
-- 'Z' => a number 1-9
-- 'N' => a number 2-9
+- `X` or `#` => random int between `0-9`
+- `Z` => random int between `1-9`
+- `N` => random int between `2-9`
 
 ## Image
 ```rust
