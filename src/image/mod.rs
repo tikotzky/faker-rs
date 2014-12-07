@@ -27,6 +27,3 @@ impl Image {
 	}
 
 }
-
-#[cfg(test)]
-mod tests;

@@ -21,6 +21,3 @@ impl Number {
 	}
 
 }
-
-#[cfg(test)]
-mod tests;

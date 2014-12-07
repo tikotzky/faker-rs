@@ -26,6 +26,3 @@ impl PhoneNumber {
         self.helpers.array_element(self.formats.as_slice()).to_string()
     }
 }
-
-#[cfg(test)]
-mod tests;

@@ -47,6 +47,3 @@ impl Lorem {
     }
 }
 
-#[cfg(test)]
-mod tests;
-
