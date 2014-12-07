@@ -1,5 +1,7 @@
-pub fn load() -> super::Locale{
-    super::Locale{
+use super::Locale;
+
+pub fn load<'a>() -> Locale<'a> {
+    Locale::<'a>{
         lorem: vec![
             "alias",
             "consequatur",
@@ -250,6 +252,21 @@ pub fn load() -> super::Locale{
             "doloribus",
             "asperiores",
             "repellat"
+        ],
+        imageCategories: vec![
+            "abstract",
+            "animals",
+            "business",
+            "cats",
+            "city",
+            "food",
+            "nightlife",
+            "fashion",
+            "people",
+            "nature",
+            "sports",
+            "technics",
+            "transport"
         ]
     }
 }

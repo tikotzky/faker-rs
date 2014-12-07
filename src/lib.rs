@@ -7,10 +7,12 @@ pub use faker::Faker;
 
 mod faker;
 mod locale;
-pub mod lorem;
 mod helpers;
+pub mod lorem;
+pub mod image;
+
 
 // pub mod name;
 // pub mod phone_number;
-// pub mod image;
+
 // pub mod number;

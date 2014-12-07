@@ -1,5 +1,5 @@
-use super::helpers;
 use super::locale::Locale;
+use super::helpers;
 
 pub struct Lorem {
     lorem: Vec<&'static str>
