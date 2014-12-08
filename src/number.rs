@@ -17,7 +17,7 @@ impl Number {
 	}
 
 	pub fn number(&self, num: int) -> String {
-	 	range(0, num).map(|x| x.to_string()).collect::<Vec<String>>().connect("")
+	 	range(0, num).map(|_| self.digit().to_string()).collect::<Vec<String>>().connect("")
 	}
 
 }
