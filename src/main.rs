@@ -27,7 +27,7 @@ fn main() {
     println!("faker.name.last_name() = {}",     faker.name.last_name());
     println!("faker.name.prefix() = {}",        faker.name.prefix());
     println!("faker.name.suffix() = {}",        faker.name.suffix());
-    println!("faker.name.name() = {}",          faker.name.name());
+    println!("faker.name.name() = {}",          faker.name.full_name());
 
     println!("\n\n#### BEGIN NUMBER ####")
     println!("faker.number.digit() = {}",       faker.number.digit());

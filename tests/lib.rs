@@ -120,7 +120,7 @@ fn test_last_name(){
 #[test]
 fn test_name(){
 	let faker = Faker::new("en");
-	let name = faker.name.name();
+	let name = faker.name.full_name();
 	let matched = regex!(r"^(\w+\.? ?){2,3}$").is_match(name.as_slice());
 	assert!(matched);
 }

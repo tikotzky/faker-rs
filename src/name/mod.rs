@@ -42,7 +42,7 @@ impl Name {
         self.helpers.array_element(self.suffix.as_slice()).to_string()
     }
 
-    pub fn name(&self)  -> String {
+    pub fn full_name(&self)  -> String {
         let name = self.first_name() + " " + self.last_name();
         match self.helpers.number_in_range::<int>(0, 8) {
             0 => self.prefix() + " " + name,
