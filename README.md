@@ -37,7 +37,7 @@ faker.address.street_address(); // "2814 Shannon Roads"
 faker.address.state_abbr(); // "AR"
 faker.address.country(); // "Cyprus"
 faker.address.latitude(); // "87.099724"
-faker.address.longitude() // "-58.324116"
+faker.address.longitude(); // "-58.324116"
 ```
 ## Lorem
 ```rust
