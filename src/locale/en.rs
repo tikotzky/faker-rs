@@ -3815,7 +3815,7 @@ pub fn load() -> Locale {
             "1-NXX-NXX-XXXX xNXXX",
             "NXX.NXX.XXXX xNXXX",
             "NXX-NXX-XXXX xNXXXX",
-            "(NXX)NXX-NXX xNXXXX",
+            "(NXX)NXX-NXXX xNXXXX",
             "1-NXX-NXX-XXXX xNXXXX",
             "NXX.NXX.XXXX xNXXXX"
         ],
