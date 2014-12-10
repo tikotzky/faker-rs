@@ -41,5 +41,25 @@ fn main() {
     println!("faker.helpers.number() = {}",             faker.helpers.number::<int>());
     println!("faker.helpers.number_in_range() = {}",    faker.helpers.number_in_range(0i, 10));
 
+    println!("\n\n#### BEGIN ADDRESS ####")
+    println!("faker.address.city_prefix() = {}",      faker.address.city_prefix());
+    println!("faker.address.city_suffix() = {}",      faker.address.city_suffix());
+    println!("faker.address.street_suffix() = {}",    faker.address.street_suffix());
+    println!("faker.address.state() = {}",            faker.address.state());
+    println!("faker.address.time_zone() = {}",        faker.address.time_zone());
+    println!("faker.address.building_number() = {}",  faker.address.building_number());
+    println!("faker.address.zip() = {}",              faker.address.zip());
+    println!("faker.address.secondary_address() = {}",faker.address.secondary_address());
+    println!("faker.address.city() = {}",             faker.address.city());
+    println!("faker.address.street_name() = {}",      faker.address.street_name());
+    println!("faker.address.street_address() = {}",   faker.address.street_address());
+    println!("faker.address.state_abbr() = {}",       faker.address.state_abbr());
+    println!("faker.address.country() = {}",          faker.address.country());
+    println!("faker.address.latitude() = {}",         faker.address.latitude());
+    println!("faker.address.longitude() = {}",        faker.address.longitude());
+
+
+
+
     return;
 }

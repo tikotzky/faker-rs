@@ -21,6 +21,24 @@ faker.name.last_name(); // "Ernser"
 faker.name.prefix(); // "Mr."
 faker.name.suffix(); // "IV"
 ```
+## Address
+```rust
+faker.address.city_prefix(); // "West"
+faker.address.city_suffix(); // "mouth"
+faker.address.street_suffix(); // "Landing"
+faker.address.state(); // "New Jersey"
+faker.address.time_zone(); // "Europe/Helsinki"
+faker.address.building_number(); // "853"
+faker.address.zip(); // "00531"
+faker.address.secondary_address(); // "Apt. 329"
+faker.address.city(); // "North Rasheedview"
+faker.address.street_name(); // "Haag Station"
+faker.address.street_address(); // "2814 Shannon Roads"
+faker.address.state_abbr(); // "AR"
+faker.address.country(); // "Cyprus"
+faker.address.latitude(); // "87.099724"
+faker.address.longitude() // "-58.324116"
+```
 ## Lorem
 ```rust
 faker.lorem.word();  // "eligendi"

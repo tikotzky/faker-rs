@@ -1,5 +1,6 @@
 use super::locale::Locale;
 use super::helpers::Helpers;
+use std::fmt;
 
 pub struct Name {
     first_names: Vec<&'static str>, 
@@ -45,8 +46,8 @@ impl Name {
     pub fn full_name(&self)  -> String {
         let name = self.first_name() + " " + self.last_name();
         match self.helpers.number_in_range::<int>(0, 8) {
-            0 => self.prefix() + " " + name,
-            1 => name + " " + self.suffix(),
+            0 => format!("{} {}", self.prefix(), name),
+            1 => format!("{} {}", name, self.suffix()),
             _ => name
         }
     }

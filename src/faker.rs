@@ -4,6 +4,7 @@ use super::lorem::Lorem;
 use super::name::Name;
 use super::number::Number;
 use super::phone_number::PhoneNumber;
+use super::address::Address;
 use super::locale::en;
 
 pub struct Faker {
@@ -12,7 +13,8 @@ pub struct Faker {
     pub lorem: Lorem,
     pub name: Name,
     pub number: Number,
-    pub phone_number: PhoneNumber
+    pub phone_number: PhoneNumber,
+    pub address: Address
 }
 
 impl Faker {
@@ -29,7 +31,8 @@ impl Faker {
             lorem       :   Lorem::new       (strings.clone()),
             name        :   Name::new        (strings.clone()),
             number      :   Number::new      (),
-            phone_number:   PhoneNumber::new (strings.clone())
+            phone_number:   PhoneNumber::new (strings.clone()),
+            address     :   Address::new     (strings.clone())
         }
     }
 }
