@@ -7,6 +7,7 @@ pub struct Lorem {
 }
 
 impl Lorem {
+
     pub fn new(locale: Locale) -> Lorem {
         Lorem {
             lorem: locale.lorem,
@@ -45,5 +46,6 @@ impl Lorem {
         }
         paragraphs
     }
+    
 }
 

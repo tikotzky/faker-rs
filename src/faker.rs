@@ -18,6 +18,7 @@ pub struct Faker {
 }
 
 impl Faker {
+
     pub fn new(locale: &str) -> Faker {
 
         let strings = match locale {
@@ -35,4 +36,5 @@ impl Faker {
             address     :   Address::new     (strings.clone())
         }
     }
+    
 }

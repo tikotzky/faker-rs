@@ -7,6 +7,7 @@ pub struct PhoneNumber {
 }
 
 impl PhoneNumber {
+
     pub fn new(locale: Locale) -> PhoneNumber {
         PhoneNumber {
             formats: locale.phone_formats,
@@ -25,4 +26,5 @@ impl PhoneNumber {
     fn phone_formats(&self) -> String {
         self.helpers.array_element(self.formats.as_slice()).to_string()
     }
+    
 }

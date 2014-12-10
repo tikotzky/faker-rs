@@ -7,6 +7,7 @@ pub struct Image {
 }
 
 impl Image {
+    
 	pub fn new(locale: Locale) -> Image {
 		Image {
             categories: locale.image_categories,

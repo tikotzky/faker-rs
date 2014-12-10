@@ -12,6 +12,7 @@ pub struct Name {
 }
 
 impl Name {
+    
     pub fn new(locale: Locale) -> Name {
         Name {
             first_names: locale.name_first, 
@@ -51,4 +52,5 @@ impl Name {
             _ => name
         }
     }
+
 }

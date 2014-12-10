@@ -20,6 +20,7 @@ pub struct Address {
 
 
 impl Address {
+
     pub fn new(locale: Locale) -> Address {
         Address {
             building_number: locale.building_number,
@@ -116,7 +117,5 @@ impl Address {
     pub fn longitude(&self) -> String {
         ((self.helpers.number::<f64>() * 360f64) - 180f64).to_string()
     } 
-
-
-
+    
 }
