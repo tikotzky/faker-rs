@@ -1,7 +1,6 @@
 #Faker
 [![faker travis](http://img.shields.io/travis/tikotzky/faker-rs.svg?branch=master&style=flat-square)](https://travis-ci.org/tikotzky/faker-rs)
 
-Warning! This is still very much a work in progress and not production ready at the moment.
 ##Installation
 Add faker to your Cargo.toml
 ```toml
@@ -111,9 +110,17 @@ faker.image.image(100, 100) // "http://lorempixel.com/100/100/business"
 * technics
 * transport
 
+##Contributing
+1. Fork the repo.
+3. Add a test for your change.
+4. Make the test pass. `cargo test`
+5. Push to your fork and submit a pull request.
+
 ## Authors
 * [Seth Pollack](https://github.com/sethpollack)
 * [Mordy Tikotzky](https://github.com/tikotzky)
+
+***
 
 The MIT License  
 Copyright (c) 2014 [Mordy Tikotzky](https://github.com/tikotzky), [Seth Pollack](https://github.com/sethpollack)
