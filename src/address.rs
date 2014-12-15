@@ -52,7 +52,11 @@ impl Address {
     }
 
     pub fn city_suffix(&self)  -> String {
-            self.helpers.array_element(self.city_suffix.as_slice()).to_string()
+            self.helpers.sentance_case(self.helpers.array_element(self.city_suffix.as_slice()).to_string())
+    }
+
+    fn city_suffix_lower(&self)  -> String {
+            self.helpers.lowercase(self.city_suffix())
     }
 
     pub fn street_suffix(&self)  -> String {
@@ -92,10 +96,10 @@ impl Address {
 
     pub fn city(&self) -> String {
         match self.helpers.number_in_range::<int>(0, 3) {
-                0 => format!("{} {}{}", self.city_prefix(), self.first_name(), self.city_suffix()),
+                0 => format!("{} {}{}", self.city_prefix(), self.first_name(), self.city_suffix_lower()),
                 1 => format!("{} {}", self.city_prefix(), self.first_name()),
-                2 => format!("{}{}", self.first_name(), self.city_suffix()),
-                _ => format!("{}{}", self.last_name(), self.city_suffix())
+                2 => format!("{}{}", self.first_name(), self.city_suffix_lower()),
+                _ => format!("{}{}", self.last_name(), self.city_suffix_lower())
         }   
     }
 

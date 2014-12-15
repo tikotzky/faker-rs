@@ -39,4 +39,14 @@ impl Helpers {
         &array[index]
     }
 
+    pub fn sentance_case(&self, str: String) -> String {
+        let char = str.char_at(0).to_uppercase();
+        char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")
+    }
+
+    pub fn lowercase(&self, str: String) -> String {
+        let char = str.char_at(0).to_lowercase();
+        char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")
+    }
+
 }
