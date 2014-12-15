@@ -52,7 +52,7 @@ impl Address {
     }
 
     pub fn city_suffix(&self)  -> String {
-            self.helpers.sentance_case(self.helpers.array_element(self.city_suffix.as_slice()).to_string())
+            self.helpers.sentence_case(self.helpers.array_element(self.city_suffix.as_slice()).to_string())
     }
 
     fn city_suffix_lower(&self)  -> String {

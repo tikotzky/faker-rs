@@ -24,7 +24,7 @@ impl Lorem {
     }
 
     pub fn sentence(&self, word_count: uint, range: uint) -> String {
-        self.helpers.sentance_case(self.words(word_count + self.helpers.number_in_range(0, range)).connect(" "))
+        self.helpers.sentence_case(self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")) + "."
     }
 
     pub fn sentences(&self, sentence_count: uint) -> Vec<String> {

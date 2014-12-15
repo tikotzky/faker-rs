@@ -23,7 +23,7 @@ faker.name.suffix(); // "IV"
 ## Address
 ```rust
 faker.address.city_prefix(); // "West"
-faker.address.city_suffix(); // "mouth"
+faker.address.city_suffix(); // "Mouth"
 faker.address.street_suffix(); // "Landing"
 faker.address.state(); // "New Jersey"
 faker.address.time_zone(); // "Europe/Helsinki"
@@ -42,13 +42,13 @@ faker.address.longitude(); // "-58.324116"
 ```rust
 faker.lorem.word();  // "eligendi"
 faker.lorem.words(5) // ["molestiae", "et", "non", "qui", "nisi"]
-faker.lorem.sentence(4, 6); // "quia itaque veritatis ea voluptatibus"
+faker.lorem.sentence(4, 6); // "Qui soluta eos quia enim voluptatem rem."
 faker.lorem.sentences(3); 
-//["vero labore nemo soluta commodi sequi consequatur sed", "cupiditate quo officiis perspiciatis vel reiciendis atque veniam", "facere consequuntur ut voluptas quos veniam aut id dolores"]
+//["Delectus magnam recusandae maxime sit et dolorem tenetur.", "Ut qui porro qui aperiam quae quos ab., Soluta beatae ut blanditiis odit amet et perferendis repellendus fugit.""]
 faker.lorem.paragraph(3);   
-//"et et velit neque et nostrum vel dolorem blanditiis ut occaecati officia odit ratione totam voluptatem et quam quo amet laudantium aut porro aut esse pariatur suscipit et doloremque ipsam rerum qui cupiditate tempore maiores voluptas"
+// "Ut voluptatibus adipisci id doloremque odio nam libero distinctio vel. Beatae quos voluptas est ab cum quo nobis. Rerum occaecati rerum provident eligendi at soluta. Qui consequatur repellat voluptates nihil fugiat ea. Eius tempore voluptas enim culpa harum qui velit laboriosam omnis. Dolore est aspernatur qui a reiciendis eius culpa sunt."
 faker.lorem.paragraphs(2); 
-//["dolorem iste vitae doloribus ea vel nulla qui aliquam et dolorem eius rem voluptas deleniti voluptatem occaecati sint voluptatem fuga non ducimus voluptas eaque quia dicta nobis vel voluptatem id suscipit inventore et excepturi earum mollitia rem tempora deserunt laborum nobis", "eum qui accusantium et incidunt ad provident laboriosam similique ut nulla qui qui atque et iste rerum incidunt quia voluptas nobis nemo rerum assumenda voluptate non qui mollitia molestiae nesciunt tempore repellat ipsam natus cupiditate"]
+//["Dolorem alias blanditiis harum sunt sit amet cum. Vitae quo nam rerum optio tenetur placeat. Cum quidem nesciunt cupiditate vel saepe voluptas dolore.", "Libero error porro quo esse quisquam beatae ex veritatis. Ut vitae voluptates impedit aliquam vel officiis porro aut amet. Dolorem quis doloribus nisi illum quia vero. Qui voluptatem repudiandae excepturi delectus earum beatae quos."]
 ```
 ## Number
 ```rust
