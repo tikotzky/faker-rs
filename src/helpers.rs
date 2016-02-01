@@ -22,7 +22,7 @@ impl Helpers {
             'N' => self.number_in_range(2i32, 9i32).to_string(),
             '#' => self.number_in_range(0i32, 9i32).to_string(),
             other => other.to_string()
-        }).collect::<Vec<String>>().connect("")
+        }).collect::<Vec<String>>().join("")
     }
 
     pub fn number<T: Rand>(&self) -> T {
@@ -42,14 +42,14 @@ impl Helpers {
         &array[index]
     }
 
-    pub fn sentence_case(&self, str: String) -> String {
+    pub fn sentence_case(&self, _str: String) -> String {
         // TODO: Fix
         // let char = str.char_at(0).to_uppercase();
         // char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")
         "TODO".into()
     }
 
-    pub fn lowercase(&self, str: String) -> String {
+    pub fn lowercase(&self, _str: String) -> String {
         // TODO: Fix
         // let char = str.char_at(0).to_lowercase();
         // char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")

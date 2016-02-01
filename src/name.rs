@@ -1,6 +1,5 @@
 use super::locale::Locale;
 use super::helpers::Helpers;
-use std::fmt;
 
 pub struct Name {
     first_names: Vec<&'static str>,

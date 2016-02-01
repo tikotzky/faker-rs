@@ -17,7 +17,7 @@ impl Number {
 	}
 
 	pub fn number(&self, num: u32) -> String {
-	 	(0..num).map(|_| self.digit().to_string()).collect::<Vec<String>>().connect("")
+	 	(0..num).map(|_| self.digit().to_string()).collect::<Vec<String>>().join("")
 	}
 
 }

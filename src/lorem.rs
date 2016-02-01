@@ -16,7 +16,7 @@ impl Lorem {
     }
 
     pub fn word(&self) -> String {
-        self.words(1).connect("")
+        self.words(1).join("")
     }
 
     pub fn words(&self, num: usize) -> Vec<&str> {
@@ -24,7 +24,7 @@ impl Lorem {
     }
 
     pub fn sentence(&self, word_count: usize, range: usize) -> String {
-        self.helpers.sentence_case(self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")) + "."
+        self.helpers.sentence_case(self.words(word_count + self.helpers.number_in_range(0, range)).join(" ")) + "."
     }
 
     pub fn sentences(&self, sentence_count: u32) -> Vec<String> {
@@ -36,7 +36,7 @@ impl Lorem {
     }
 
     pub fn paragraph(&self, sentence_count: u32) -> String {
-        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).connect("\n")
+        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).join("\n")
     }
 
     pub fn paragraphs(&self, paragraph_count: u32) -> Vec<String> {

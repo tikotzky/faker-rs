@@ -1,6 +1,5 @@
 use super::locale::Locale;
 use super::helpers::Helpers;
-use std::fmt;
 
 pub struct Address {
     building_number: Vec<&'static str>,
