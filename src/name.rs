@@ -24,23 +24,23 @@ impl Name {
     }
 
     pub fn title(&self) -> String {
-        self.helpers.array_element(self.title.as_slice()).to_string()
+        self.helpers.array_element(&self.title).to_string()
     }
 
     pub fn first_name(&self) -> String {
-        self.helpers.array_element(self.first_names.as_slice()).to_string()
+        self.helpers.array_element(&self.first_names).to_string()
     }
 
     pub fn last_name(&self)  -> String {
-        self.helpers.array_element(self.last_names.as_slice()).to_string()
+        self.helpers.array_element(&self.last_names).to_string()
     }
 
     pub fn prefix(&self)     -> String {
-        self.helpers.array_element(self.prefix.as_slice()).to_string()
+        self.helpers.array_element(&self.prefix).to_string()
     }
 
     pub fn suffix(&self)     -> String {
-        self.helpers.array_element(self.suffix.as_slice()).to_string()
+        self.helpers.array_element(&self.suffix).to_string()
     }
 
     pub fn full_name(&self)  -> String {

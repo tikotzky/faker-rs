@@ -39,19 +39,19 @@ impl Address {
     }
 
     fn first_name(&self) -> String {
-            self.helpers.array_element(self.first_names.as_slice()).to_string()
+            self.helpers.array_element(&self.first_names).to_string()
     }
 
     fn last_name(&self)  -> String {
-            self.helpers.array_element(self.last_names.as_slice()).to_string()
+            self.helpers.array_element(&self.last_names).to_string()
     }
 
     pub fn city_prefix(&self)  -> String {
-            self.helpers.array_element(self.city_prefix.as_slice()).to_string()
+            self.helpers.array_element(&self.city_prefix).to_string()
     }
 
     pub fn city_suffix(&self)  -> String {
-            self.helpers.sentence_case(self.helpers.array_element(self.city_suffix.as_slice()).to_string())
+            self.helpers.sentence_case(self.helpers.array_element(&self.city_suffix).to_string())
     }
 
     fn city_suffix_lower(&self)  -> String {
@@ -59,37 +59,37 @@ impl Address {
     }
 
     pub fn street_suffix(&self)  -> String {
-            self.helpers.array_element(self.street_suffix.as_slice()).to_string()
+            self.helpers.array_element(&self.street_suffix).to_string()
     }
 
     pub fn state(&self)  -> String {
-            self.helpers.array_element(self.state.as_slice()).to_string()
+            self.helpers.array_element(&self.state).to_string()
     }
 
     pub fn country(&self)  -> String {
-            self.helpers.array_element(self.country.as_slice()).to_string()
+            self.helpers.array_element(&self.country).to_string()
     }
 
     pub fn time_zone(&self)  -> String {
-            self.helpers.array_element(self.time_zone.as_slice()).to_string()
+            self.helpers.array_element(&self.time_zone).to_string()
     }
 
     pub fn state_abbr(&self)  -> String {
-            self.helpers.array_element(self.state_abbr.as_slice()).to_string()
+            self.helpers.array_element(&self.state_abbr).to_string()
     }
 
     pub fn building_number(&self) -> String {
-            let format = self.helpers.array_element(self.building_number.as_slice()).to_string();
+            let format = self.helpers.array_element(&self.building_number).to_string();
             self.helpers.replace_sym_with_number(format)
     }
 
     pub fn zip(&self) -> String {
-            let format = self.helpers.array_element(self.zip.as_slice()).to_string();
+            let format = self.helpers.array_element(&self.zip).to_string();
             self.helpers.replace_sym_with_number(format)
     }
 
     pub fn secondary_address(&self) -> String {
-            let format = self.helpers.array_element(self.secondary_address.as_slice()).to_string();
+            let format = self.helpers.array_element(&self.secondary_address).to_string();
             self.helpers.replace_sym_with_number(format)
     }
 

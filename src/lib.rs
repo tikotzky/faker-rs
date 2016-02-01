@@ -3,6 +3,10 @@ extern crate regex;
 
 pub use faker::Faker;
 
+pub trait Fake {
+    fn Fake(locale: locale::Locale) -> Self;
+}
+
 mod faker;
 mod locale;
 mod helpers;
