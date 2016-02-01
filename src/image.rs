@@ -7,7 +7,7 @@ pub struct Image {
 }
 
 impl Image {
-    
+
 	pub fn new(locale: Locale) -> Image {
 		Image {
             categories: locale.image_categories,
@@ -15,15 +15,15 @@ impl Image {
         }
 	}
 
-	pub fn image(&self, width: int, height: int) -> String {
-		self.category(width, height, self.helpers.array_element(self.categories.as_slice()).as_slice())
+	pub fn image(&self, width: i32, height: i32) -> String {
+		self.category(width, height, &self.helpers.array_element(&self.categories))
 	}
 
-	pub fn category(&self, width: int, height: int, category: &str) -> String {
+	pub fn category(&self, width: i32, height: i32, category: &str) -> String {
 		format!("http://lorempixel.com/{}/{}/{}", width, height, category)
 	}
 
-	pub fn avatar(&self, width: int, height: int, slug: &str, format: &str) -> String{
+	pub fn avatar(&self, width: i32, height: i32, slug: &str, format: &str) -> String{
 		format!("http://robohash.org/#{}.#{}?size=#{}x{}", slug, format, width, height)
 	}
 

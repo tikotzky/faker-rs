@@ -16,7 +16,7 @@ impl PhoneNumber {
     }
 
     pub fn phone_number(&self) -> String {
-        self.phone_number_format(self.phone_formats().as_slice())
+        self.phone_number_format(&self.phone_formats())
     }
 
     pub fn phone_number_format(&self, format: &str) -> String {
@@ -24,7 +24,7 @@ impl PhoneNumber {
     }
 
     fn phone_formats(&self) -> String {
-        self.helpers.array_element(self.formats.as_slice()).to_string()
+        self.helpers.array_element(&self.formats).to_string()
     }
-    
+
 }

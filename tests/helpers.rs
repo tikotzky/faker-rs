@@ -4,7 +4,7 @@ use faker::Faker;
 #[test]
 fn test_shuffle(){
     let faker = Faker::new("en");
-    static TEST_ARRAY: [&'static str, ..5] = [
+    static TEST_ARRAY: [&'static str; 5] = [
         "One",
         "Two",
         "Three",
@@ -23,41 +23,41 @@ fn test_shuffle(){
 #[test]
 fn test_helper_number(){
     let faker = Faker::new("en");
-    let a: int = faker.helpers.number();
-    let b = 1i;
+    let a: i32 = faker.helpers.number();
+    let b = 1;
     assert_eq!(a/b, a);
 }
 
 #[test]
 fn test_helper_number_in_range(){
     let faker = Faker::new("en");
-    for _ in range(0u, 1000) {
-        let a = faker.helpers.number_in_range(-3i, 42);
+    for _ in 0..1000 {
+        let a = faker.helpers.number_in_range(-3, 42);
         assert!(a >= -3 && a <= 42);
-        assert_eq!(faker.helpers.number_in_range(0i, 0), 0);
-        assert_eq!(faker.helpers.number_in_range(-12i, -12), -12);
+        assert_eq!(faker.helpers.number_in_range(0, 0), 0);
+        assert_eq!(faker.helpers.number_in_range(-12, -12), -12);
     }
-    for _ in range(0u, 1000) {
-        let a = faker.helpers.number_in_range(10i, 42);
+    for _ in 0..1000 {
+        let a = faker.helpers.number_in_range(10, 42);
         assert!(a >= 10 && a <= 42);
-        assert_eq!(faker.helpers.number_in_range(0i, 0), 0);
-        assert_eq!(faker.helpers.number_in_range(3_000_000u, 3_000_000), 3_000_000);
+        assert_eq!(faker.helpers.number_in_range(0, 0), 0);
+        assert_eq!(faker.helpers.number_in_range(3_000_000, 3_000_000), 3_000_000);
     }
 }
 
 #[test]
-#[should_fail]
+#[should_panic]
 fn test_number_in_range_panic(){
     let faker = Faker::new("en");
-    faker.helpers.number_in_range(9i, 7);
+    faker.helpers.number_in_range(9, 7);
 }
 
 #[test]
 fn test_array_element(){
     let faker = Faker::new("en");
-    let a : [int, ..1] = [1];
-    for _ in range(0u, 1000) {
+    let a = [1];
+    for _ in 0..1000 {
         // test that we dont try to access an index that is out of bounds
         faker.helpers.array_element(&a);
-    } 
+    }
 }
