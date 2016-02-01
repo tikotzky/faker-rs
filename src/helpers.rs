@@ -42,18 +42,16 @@ impl Helpers {
         &array[index]
     }
 
-    pub fn sentence_case(&self, _str: String) -> String {
-        // TODO: Fix
-        // let char = str.char_at(0).to_uppercase();
-        // char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")
-        "TODO".into()
+    pub fn sentence_case(&self, str: String) -> String {
+        str.chars().enumerate().map(|(i, c)| {
+            if i == 0 { c.to_uppercase().next().unwrap() } else { c }
+        }).collect()
     }
 
-    pub fn lowercase(&self, _str: String) -> String {
-        // TODO: Fix
-        // let char = str.char_at(0).to_lowercase();
-        // char.to_string() + str.chars().skip(1).map(|c| c.to_string()).collect::<Vec<String>>().connect("")
-        "TODO".into()
+    pub fn lowercase(&self, str: String) -> String {
+        str.chars().enumerate().map(|(i, c)| {
+            if i == 0 { c.to_lowercase().next().unwrap() } else { c }
+        }).collect()
     }
 
 }
