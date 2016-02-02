@@ -1,3 +1,6 @@
+extern crate rand;
+extern crate regex;
+
 pub use faker::Faker;
 
 mod faker;
@@ -9,4 +12,3 @@ pub mod name;
 pub mod number;
 pub mod phone_number;
 pub mod address;
-

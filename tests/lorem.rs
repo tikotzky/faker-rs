@@ -1,4 +1,5 @@
 extern crate faker;
+
 use faker::Faker;
 
 #[test]

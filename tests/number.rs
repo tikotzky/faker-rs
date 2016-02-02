@@ -1,16 +1,14 @@
-#![feature(phase)]
 extern crate regex;
-#[phase(plugin)] 
-extern crate regex_macros;
 extern crate faker;
-use faker::Faker;
 
+use regex::Regex;
+use faker::Faker;
 
 #[test]
 fn test_number() {
 	let faker = Faker::new("en");
-	for _ in range(0u, 1000) {
-		let matched = regex!(r"\d{10}").is_match(faker.number.number(10).as_slice());
+	for _ in 0..1000 {
+		let matched = Regex::new(r"\d{10}").unwrap().is_match(&faker.number.number(10));
 		assert!(matched);
 	}
 }
@@ -18,8 +16,8 @@ fn test_number() {
 #[test]
 fn test_digit() {
 	let faker = Faker::new("en");
-	for _ in range(0u, 1000) {
-		let matched = regex!(r"\d{1}").is_match(faker.number.digit().as_slice());
+	for _ in 0..1000 {
+		let matched = Regex::new(r"\d{1}").unwrap().is_match(&faker.number.digit());
 		assert!(matched);
 	}
 }

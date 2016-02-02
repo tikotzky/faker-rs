@@ -16,35 +16,34 @@ impl Lorem {
     }
 
     pub fn word(&self) -> String {
-        self.words(1).connect("")
+        self.words(1).join("")
     }
 
-    pub fn words(&self, num: uint) -> Vec<&str> {
-        self.helpers.shuffle(self.lorem.as_slice()).slice(0, num).to_vec()
+    pub fn words(&self, num: usize) -> Vec<&str> {
+        self.helpers.shuffle(&self.lorem)[0..num].to_vec()
     }
 
-    pub fn sentence(&self, word_count: uint, range: uint) -> String {
-        self.helpers.sentence_case(self.words(word_count + self.helpers.number_in_range(0, range)).connect(" ")) + "."
+    pub fn sentence(&self, word_count: usize, range: usize) -> String {
+        self.helpers.sentence_case(self.words(word_count + self.helpers.number_in_range(0, range)).join(" ")) + "."
     }
 
-    pub fn sentences(&self, sentence_count: uint) -> Vec<String> {
+    pub fn sentences(&self, sentence_count: u32) -> Vec<String> {
         let mut sentences = Vec::new();
-        for _ in range(0, sentence_count) {
+        for _ in 0..sentence_count {
             sentences.push(self.sentence(7, 3));
         }
         sentences
     }
 
-    pub fn paragraph(&self, sentence_count: uint) -> String {
-        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).connect("\n")
+    pub fn paragraph(&self, sentence_count: u32) -> String {
+        self.sentences(sentence_count + self.helpers.number_in_range(0, 3)).join("\n")
     }
 
-    pub fn paragraphs(&self, paragraph_count: uint) -> Vec<String> {
+    pub fn paragraphs(&self, paragraph_count: u32) -> Vec<String> {
         let mut paragraphs = Vec::new();
-        for _ in range(0, paragraph_count) {
+        for _ in 0..paragraph_count {
             paragraphs.push(self.paragraph(3));
         }
         paragraphs
-    }    
+    }
 }
-
