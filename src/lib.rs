@@ -1,5 +1,4 @@
 extern crate rand;
-extern crate regex;
 
 pub use faker::Faker;
 
