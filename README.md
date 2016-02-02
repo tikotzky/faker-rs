@@ -1,5 +1,5 @@
-#Faker
-[![faker travis](http://img.shields.io/travis/tikotzky/faker-rs.svg?branch=master&style=flat-square)](https://travis-ci.org/tikotzky/faker-rs)
+# Faker
+[![Build Status](https://travis-ci.org/tikotzky/faker-rs.svg?branch=master)](https://travis-ci.org/tikotzky/faker-rs)
 
 ##Installation
 Add faker to your Cargo.toml
@@ -43,11 +43,11 @@ faker.address.longitude(); // "-58.324116"
 faker.lorem.word();  // "eligendi"
 faker.lorem.words(5) // ["molestiae", "et", "non", "qui", "nisi"]
 faker.lorem.sentence(4, 6); // "Qui soluta eos quia enim voluptatem rem."
-faker.lorem.sentences(3); 
+faker.lorem.sentences(3);
 //["Delectus magnam recusandae maxime sit et dolorem tenetur.", "Ut qui porro qui aperiam quae quos ab., Soluta beatae ut blanditiis odit amet et perferendis repellendus fugit.""]
 faker.lorem.paragraph(3);   
 // "Ut voluptatibus adipisci id doloremque odio nam libero distinctio vel. Beatae quos voluptas est ab cum quo nobis. Rerum occaecati rerum provident eligendi at soluta. Qui consequatur repellat voluptates nihil fugiat ea. Eius tempore voluptas enim culpa harum qui velit laboriosam omnis. Dolore est aspernatur qui a reiciendis eius culpa sunt."
-faker.lorem.paragraphs(2); 
+faker.lorem.paragraphs(2);
 //["Dolorem alias blanditiis harum sunt sit amet cum. Vitae quo nam rerum optio tenetur placeat. Cum quidem nesciunt cupiditate vel saepe voluptas dolore.", "Libero error porro quo esse quisquam beatae ex veritatis. Ut vitae voluptates impedit aliquam vel officiis porro aut amet. Dolorem quis doloribus nisi illum quia vero. Qui voluptatem repudiandae excepturi delectus earum beatae quos."]
 ```
 ## Number
