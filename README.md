@@ -1,7 +1,7 @@
 # Faker
 [![Build Status](https://travis-ci.org/tikotzky/faker-rs.svg?branch=master)](https://travis-ci.org/tikotzky/faker-rs)
 
-##Installation
+## Installation
 Add faker to your Cargo.toml
 ```toml
 [dependencies]
@@ -64,7 +64,7 @@ faker.phone_number.phone_number_format("1-NXX-NXX-XXXX"); // "1-397-693-1309"
 //returns a random phone format
 faker.phone_number.phone_formats(); // 1-NXX-NXX-XXXX"
 ```
-###Formating
+### Formating
 Phone numbers may be in any of the following formats:
 * "NXX-NXX-XXXX"
 * "(NXX)NXX-XXXX"
@@ -83,7 +83,7 @@ Phone numbers may be in any of the following formats:
 * "1-NXX-NXX-XXXX xNXXXX"
 * "NXX.NXX.XXXX xNXXXX"
 
-#####This format gets replaced with the following:
+##### This format gets replaced with the following:
 - 'X' or '#' => a number 0-9
 - 'Z' => a number 1-9
 - 'N' => a number 2-9
@@ -95,7 +95,7 @@ faker.image.category(100, 100, "cats") // "http://lorempixel.com/100/100/cats"
 // returns an image with a random category
 faker.image.image(100, 100) // "http://lorempixel.com/100/100/business"
 ```
-#####Avaiable categories are:
+##### Avaiable categories are:
 * abstract
 * animals
 * business
@@ -110,7 +110,7 @@ faker.image.image(100, 100) // "http://lorempixel.com/100/100/business"
 * technics
 * transport
 
-##Contributing
+## Contributing
 1. Fork the repo.
 3. Add a test for your change.
 4. Make the test pass. `cargo test`
