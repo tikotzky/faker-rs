@@ -95,7 +95,7 @@ faker.image.category(100, 100, "cats") // "http://lorempixel.com/100/100/cats"
 // returns an image with a random category
 faker.image.image(100, 100) // "http://lorempixel.com/100/100/business"
 ```
-##### Avaiable categories are:
+##### Available categories are:
 * abstract
 * animals
 * business
