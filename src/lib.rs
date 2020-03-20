@@ -1,13 +1,20 @@
 extern crate rand;
-
-pub use faker::Faker;
+#[cfg(test)]
+extern crate regex;
 
 mod faker;
-mod locale;
+pub use faker::Faker;
 mod helpers;
-pub mod image;
-pub mod lorem;
-pub mod name;
-pub mod number;
-pub mod phone_number;
-pub mod address;
+mod image;
+mod locale;
+pub use image::Image;
+mod lorem;
+pub use lorem::Lorem;
+mod name;
+pub use name::Name;
+mod number;
+pub use number::Number;
+mod phone_number;
+pub use phone_number::PhoneNumber;
+mod address;
+pub use address::Address;
