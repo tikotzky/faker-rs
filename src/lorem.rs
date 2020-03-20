@@ -1,7 +1,7 @@
 use super::helpers;
 use super::locale::Locale;
 
-/// ## Lorem
+/// Fake lorem ipsum text
 ///
 /// ```
 /// use faker::Faker;

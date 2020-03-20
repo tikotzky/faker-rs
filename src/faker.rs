@@ -1,11 +1,12 @@
 use super::address::Address;
 use super::image::Image;
-use super::locale::en;
+use super::locale::Locale;
 use super::lorem::Lorem;
 use super::name::Name;
 use super::number::Number;
 use super::phone_number::PhoneNumber;
 
+/// **Main** structure for creating fake data
 pub struct Faker {
     pub image: Image,
     pub lorem: Lorem,
@@ -17,18 +18,15 @@ pub struct Faker {
 
 impl Faker {
     pub fn new(locale: &str) -> Faker {
-        let strings = match locale {
-            "en" => en::load(),
-            _ => en::load(),
-        };
+        let db = Locale::load(locale);
 
         Faker {
-            image: Image::new(strings.clone()),
-            lorem: Lorem::new(strings.clone()),
-            name: Name::new(strings.clone()),
             number: Number::new(),
-            phone_number: PhoneNumber::new(strings.clone()),
-            address: Address::new(strings.clone()),
+            image: Image::new(db.clone()),
+            lorem: Lorem::new(db.clone()),
+            name: Name::new(db.clone()),
+            phone_number: PhoneNumber::new(db.clone()),
+            address: Address::new(db.clone()),
         }
     }
 }

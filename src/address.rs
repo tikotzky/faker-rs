@@ -1,7 +1,7 @@
 use super::helpers;
 use super::locale::Locale;
 
-/// ### Address
+/// Fake Addresses
 ///
 /// ```
 /// use faker::Faker;

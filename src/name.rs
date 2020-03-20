@@ -1,7 +1,7 @@
 use super::helpers;
 use super::locale::Locale;
 
-/// ### Name
+/// Fake name
 ///
 /// ```
 /// use faker::Faker;

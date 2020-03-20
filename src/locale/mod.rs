@@ -24,6 +24,15 @@ pub struct Locale {
     pub country: Vec<&'static str>,
 }
 
+impl Locale {
+    pub fn load(locale: &str) -> Self {
+        match locale {
+            "en" => en::load(),
+            _ => unimplemented!(),
+        }
+    }
+}
+
 pub mod en;
 mod es;
 mod fr;

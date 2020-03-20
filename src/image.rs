@@ -1,7 +1,7 @@
 use super::helpers;
 use super::locale::Locale;
 
-/// ## Image
+/// Fake images
 ///
 /// ```
 /// use faker::Faker;

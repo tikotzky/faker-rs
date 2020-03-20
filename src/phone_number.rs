@@ -1,7 +1,7 @@
 use super::helpers;
 use super::locale::Locale;
 
-/// ## Phone Number
+/// Fake phone numbers
 ///
 /// ```
 /// use faker::Faker;

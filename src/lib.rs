@@ -1,3 +1,12 @@
+//! Create fake data, which resembles real world data.
+//!
+//! Fake data is very useful for many reasons, including but not limited to:
+//! tests and examples. While fake data looks like real data it is simply
+//! **formatted random data**, which means that in many cases the generated
+//! values **are in fact real**, beware.
+//
+// TODO: Avoid real data?
+
 extern crate rand;
 #[cfg(test)]
 extern crate regex;

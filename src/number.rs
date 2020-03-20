@@ -1,6 +1,6 @@
 use super::helpers;
 
-/// ## Number
+/// Fake numbers (if such a thing can exist)
 ///
 /// ```
 /// use faker::Faker;
